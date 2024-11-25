@@ -199,7 +199,7 @@ def pick_loss_fn(inference_dtype=None, device=None):
         # score
         scores = model.logit_scale.exp() * (text_embs @ image_embs.T)[0]
         loss = - scores.mean()
-        return  loss
+        return  loss.reshape(1, 1)   # Added reshape!
     
     return loss_fn
 

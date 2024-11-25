@@ -1,4 +1,4 @@
-name: reward_guidance
+name: DPO_guidance
 channels:
   - defaults
 dependencies:
